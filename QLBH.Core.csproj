@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FDC03BE7-C630-40E2-B665-69E92A1DFB9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLBH.Core</RootNamespace>
+    <AssemblyName>QLBH.Core</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <PublishUrl>http://localhost/QLBH.Core/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v9.2, Version=9.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DocSo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\DocSo.dll</HintPath>
+    </Reference>
+    <Reference Include="GvS.Controls.HtmlTextbox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\GvS.Controls.HtmlTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="MaHoa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\MaHoa.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 9.0\ReportViewer\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\QLBH.Documents\References\Oracle.DataAccess\2.112.1.0\2017\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\BaseControllerGeneric.cs" />
+    <Compile Include="DAO\AutoGenSerialDao.cs" />
+    <Compile Include="DAO\NetDAO.cs" />
+    <Compile Include="Form\frmPendingCallOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmPendingCallOut.Designer.cs">
+      <DependentUpon>frmPendingCallOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmThietLapMayInMaVach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmThietLapMayInMaVach.Designer.cs">
+      <DependentUpon>frmThietLapMayInMaVach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IBaseModel.cs" />
+    <Compile Include="Controllers\Job.cs" />
+    <Compile Include="Controllers\Parallel.cs" />
+    <Compile Include="Exceptions\ManagedException.cs" />
+    <Compile Include="Business\Calculations\NhapTonKhongCalc.cs" />
+    <Compile Include="Business\Calculations\NhapTonAoCalc.cs" />
+    <Compile Include="Business\Calculations\NhapTonCalc.cs" />
+    <Compile Include="Business\Calculations\NhapTonChiTietCalc.cs" />
+    <Compile Include="Business\Calculations\NhapTonThatCalc.cs" />
+    <Compile Include="Exceptions\TinhTonException.cs" />
+    <Compile Include="Business\Calculations\TonChiTietCalc.cs" />
+    <Compile Include="Business\Calculations\TonKhoCalc.cs" />
+    <Compile Include="Business\Calculations\XuatTonAoCalc.cs" />
+    <Compile Include="Business\Calculations\XuatTonCalc.cs" />
+    <Compile Include="Business\Calculations\XuatTonChiTietCalc.cs" />
+    <Compile Include="Business\Calculations\XuatTonKhongCalc.cs" />
+    <Compile Include="Business\Calculations\XuatTonThatCalc.cs" />
+    <Compile Include="Business\ChungTuBusinessBase.cs" />
+    <Compile Include="Business\ChungTuKeToanBusinessBase.cs" />
+    <Compile Include="Business\ChungTuKeToanKhoBusinessBase.cs" />
+    <Compile Include="Business\ChungTuKhoBusinessBase.cs" />
+    <Compile Include="Business\ChungTuNhapKeToanBusinessBase.cs" />
+    <Compile Include="Business\ChungTuNhapKhoBusinessBase.cs" />
+    <Compile Include="Business\ChungTuXuatKeToanBusinessBase.cs" />
+    <Compile Include="Business\ChungTuXuatKhoBusinessBase.cs" />
+    <Compile Include="Business\IBussinessKeToanProvider.cs" />
+    <Compile Include="Business\IBussinessKhoProvider.cs" />
+    <Compile Include="Controllers\AppBaseController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="DAO\DefinedTransactionDAO.cs" />
+    <Compile Include="DAO\DMSanPhamDAO.cs" />
+    <Compile Include="DAO\EventLogDAO.cs" />
+    <Compile Include="DAO\SchedulerDAO.cs" />
+    <Compile Include="DAO\TblChungTuDAO.cs" />
+    <Compile Include="Data\GtidCryption.cs" />
+    <Compile Include="Form\FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmLookUp_BaseNew_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmLookUp_BaseNew_1.Designer.cs">
+      <DependentUpon>frmLookUp_BaseNew_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmLookUp_BaseNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmLookUp_BaseNew.Designer.cs">
+      <DependentUpon>frmLookUp_BaseNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmLookUp_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmLookUp_Base.Designer.cs">
+      <DependentUpon>frmLookUp_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infors\DefinedTransactionInfo.cs" />
+    <Compile Include="Infors\DMSanPhamInfo.cs" />
+    <Compile Include="Interfaces\IBaseView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Net\Common.cs" />
+    <Compile Include="Printers\BaseSerial.cs" />
+    <Compile Include="Printers\Godex\BigSerial.cs" />
+    <Compile Include="Printers\Godex\GodexPrinter.cs" />
+    <Compile Include="Printers\Godex\SmallSerial.cs" />
+    <Compile Include="Providers\AutoGenSerialProvider.cs" />
+    <Compile Include="Providers\BusinessProviderBase.cs" />
+    <Compile Include="DAO\HangTonKhoDAO.cs" />
+    <Compile Include="DAO\TblHanghoaChiTietDAO.cs" />
+    <Compile Include="Data\BaseDAO.cs" />
+    <Compile Include="Data\CBO.cs" />
+    <Compile Include="Data\DbConnect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\IHydratable.cs" />
+    <Compile Include="Data\ProviderBase.cs" />
+    <Compile Include="Data\SqlHelper.cs" />
+    <Compile Include="Form\frmBCBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmBCBase.Designer.cs">
+      <DependentUpon>frmBCBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmProgress.Designer.cs">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_rpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_rpt.Designer.cs">
+      <DependentUpon>frm_rpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infors\ChungTuBaseInfo.cs" />
+    <Compile Include="Infors\ChungTuChiTietBaseInfo.cs" />
+    <Compile Include="Infors\ChungTuChiTietHangHoaBaseInfo.cs" />
+    <Compile Include="Infors\HangHoa_ChiTietInfo.cs" />
+    <Compile Include="Infors\HangTonKhoInfo.cs" />
+    <Compile Include="Infors\NotifyInfo.cs" />
+    <Compile Include="Infors\TheKhoInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DAO\TheKhoDAO.cs" />
+    <Compile Include="Providers\DefinedTransactionProvider.cs" />
+    <Compile Include="Providers\DmSanPhamProvider.cs" />
+    <Compile Include="Providers\EventLogProvider.cs" />
+    <Compile Include="Providers\HangTonKhoDataProvider.cs" />
+    <Compile Include="Providers\NetProvider.cs" />
+    <Compile Include="Providers\PrivilegedProvider.cs" />
+    <Compile Include="Providers\SchedulerProvider.cs" />
+    <Compile Include="Providers\TblHangHoaChiTietDataProvider.cs" />
+    <Compile Include="Providers\TheKhoDataProvider.cs" />
+    <Compile Include="Providers\SaleTidUpdateProvider.cs" />
+    <Compile Include="QLBHUtils.cs" />
+    <Compile Include="Services\ManagerService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\ManagerService.Designer.cs">
+      <DependentUpon>ManagerService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ScheduleServiceBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TestUnits\TestBase.cs" />
+    <Compile Include="TestUnits\TestUnits.cs" />
+    <Compile Include="Threads\GenericThread.cs" />
+    <Compile Include="UserControls\TaskbarNotifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCActions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCActions.Designer.cs">
+      <DependentUpon>UCActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Version\VerBase.cs" />
+    <Compile Include="Views\AppBaseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AppViewManager.cs">
+    </Compile>
+    <Compile Include="Views\ViewCollection.cs" />
+    <Compile Include="VNCodeConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmLookUp_BaseNew_1.resx">
+      <DependentUpon>frmLookUp_BaseNew_1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmLookUp_BaseNew.resx">
+      <DependentUpon>frmLookUp_BaseNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmLookUp_Base.resx">
+      <DependentUpon>frmLookUp_Base.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmProgress.resx">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmThietLapMayInMaVach.resx">
+      <DependentUpon>frmThietLapMayInMaVach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_rpt.resx">
+      <DependentUpon>frm_rpt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmPendingCallOut.resx">
+      <DependentUpon>frmPendingCallOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCActions.resx">
+      <DependentUpon>UCActions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skin.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" -n --newline-flush
+rename $(AssemblyName).dll GTID.$(AssemblyName).dll 
+"$(ProjectDir)Tools\ILMerge.exe" /out:"$(TargetDir)$(AssemblyName).dll" "$(TargetDir)GTID.$(AssemblyName).dll" "$(TargetDir)DocSo.dll" "$(TargetDir)BarcodeLib.dll" "$(TargetDir)GvS.Controls.HtmlTextbox.dll" "$(TargetDir)Microsoft.Practices.EnterpriseLibrary.Caching.dll" "$(TargetDir)Microsoft.Practices.EnterpriseLibrary.Common.dll" "$(TargetDir)Microsoft.Practices.ObjectBuilder.dll" "$(TargetDir)Microsoft.Office.Interop.Excel.dll" "$(TargetDir)MaHoa.dll" 
+rem "$(TargetDir)CrystalDecisions.CrystalReports.Engine.dll" "$(TargetDir)CrystalDecisions.Enterprise.Framework.dll" "$(TargetDir)CrystalDecisions.Enterprise.InfoStore.dll" "$(TargetDir)CrystalDecisions.ReportSource.dll" "$(TargetDir)CrystalDecisions.Windows.Forms.dll" 
+del GTID.$(AssemblyName).dll DocSo.dll BarcodeLib.dll GvS.Controls.HtmlTextbox.dll Microsoft.Practices.EnterpriseLibrary.Caching.dll Microsoft.Practices.EnterpriseLibrary.Common.dll Microsoft.Practices.ObjectBuilder.dll Microsoft.Office.Interop.Excel.dll MaHoa.dll 
+rem CrystalDecisions.CrystalReports.Engine.dll CrystalDecisions.Enterprise.Framework.dll CrystalDecisions.Enterprise.InfoStore.dll CrystalDecisions.ReportSource.dll CrystalDecisions.Windows.Forms.dll
+copy /Y "$(TargetDir)$(AssemblyName).dll" "$(ProjectDir)..\QLBH.Documents\References\$(AssemblyName).dll"
+rem copy /Y "$(TargetDir)$(AssemblyName).pdb" "$(ProjectDir)..\QLBH.Documents\References\$(AssemblyName).pdb"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\DanhMuc\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DanhMuc.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\DanhMuc\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DanhMuc.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\DanhMuc\QLBanHang.Modules.DanhMuc.dll"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\DongBoERP\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DongBoERP.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\DongBoERP\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DongBoERP.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\DongBoERP\QLBanHang.Modules.DongBoERP.dll"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\HeThong\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.HeThong.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\HeThong\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.HeThong.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\HeThong\QLBanHang.Modules.HeThong.dll"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\KhoHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.KhoHang.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\KhoHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.KhoHang.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\KhoHang\QLBanHang.Modules.KhoHang.dll"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\BaoHanh\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BaoHanh.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\BaoHanh\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BaoHanh.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\BaoHanh\QLBanHang.Modules.BaoHanh.dll"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\BanHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BanHang.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\BanHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BanHang.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.dll"
+</PostBuildEvent>
+    <PreBuildEvent>if exist $(TargetDir)deploy.bat $(TargetDir)deploy.bat</PreBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,49 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QLBH.Core.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="F" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="phuong" Type="System.String" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="QLBanHang_WebReference_Main" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.50.31/main.asmx</Value>
+    </Setting>
+    <Setting Name="Time" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">06:00:00</Value>
+    </Setting>
+    <Setting Name="smtpserver" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="useraccount" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="passaccount" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ssl" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="port" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="QLBanHangConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=HAH;Initial Catalog=QLBH_TA;Persist Security Info=True;User ID=sa;Password=VietNam123#;MultipleActiveResultSets=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=HAH;Initial Catalog=QLBH_TA;Persist Security Info=True;User ID=sa;Password=VietNam123#;MultipleActiveResultSets=True</Value>
+    </Setting>
+    <Setting Name="QLBanHangOracleConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=QLBH;Persist Security Info=True;User ID=QLBH;Password=qlbh;Max Pool Size=500&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OracleClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=QLBH;Persist Security Info=True;User ID=QLBH;Password=qlbh;Max Pool Size=500</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

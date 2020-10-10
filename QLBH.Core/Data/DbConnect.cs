@@ -1918,7 +1918,7 @@ namespace QLBH.Core.Data
 
         protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
         {
-            return new GtidMySqlConnection((MySqlConnection)InnerConnection.BeginTransaction(isolationLevel), this);
+            return new GtidMySqlTransaction((MySqlTransaction)InnerConnection.BeginTransaction(isolationLevel), this);
         }
 
         internal override void DeriveParametersInstance(GtidCommand command)
@@ -1941,15 +1941,6 @@ namespace QLBH.Core.Data
                 return ((MySqlConnection)InnerConnection).ServerVersion;
             }
         }
-
-        public override string HostName
-        {
-            get
-            {
-                return ((MySqlConnection)InnerConnection).HostName;
-            }
-        }
-
     }
 
     public class GtidConnection : DbConnection

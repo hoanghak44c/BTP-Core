@@ -125,6 +125,7 @@
       <HintPath>..\QLBH.Documents\References\Microsoft.Practices.ObjectBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Oracle.DataAccess, Version=2.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QLBH.Documents\References\Oracle.DataAccess\2.112.1.0\2017\Oracle.DataAccess.dll</HintPath>
@@ -403,12 +404,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\skin.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\mysql-connector-net-6.7.4-src\Source\MySql.Data\MySql.Data.csproj">
-      <Project>{E9DF5ED1-4CBD-4226-B931-9A51610AC14D}</Project>
-      <Name>MySql.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

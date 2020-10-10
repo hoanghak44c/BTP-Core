@@ -24,7 +24,7 @@ namespace QLBH.Core.Version
 
     public abstract class VerBase : IUpdateVersion
     {
-		public static readonly double CurrentVersion = 20201010095650;
+		public static readonly double CurrentVersion = 20201010111500;
 
         internal protected IUpVer Provider;
 

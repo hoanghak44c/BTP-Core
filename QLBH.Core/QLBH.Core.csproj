@@ -414,8 +414,20 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" -n --newline-flush
+rename $(AssemblyName).dll GTID.$(AssemblyName).dll 
+"$(ProjectDir)Tools\ILMerge.exe" /out:"$(TargetDir)$(AssemblyName).dll" "$(TargetDir)GTID.$(AssemblyName).dll" "$(TargetDir)DocSo.dll" "$(TargetDir)BarcodeLib.dll" "$(TargetDir)GvS.Controls.HtmlTextbox.dll" "$(TargetDir)Microsoft.Practices.EnterpriseLibrary.Caching.dll" "$(TargetDir)Microsoft.Practices.EnterpriseLibrary.Common.dll" "$(TargetDir)Microsoft.Practices.ObjectBuilder.dll" "$(TargetDir)Microsoft.Office.Interop.Excel.dll" "$(TargetDir)MaHoa.dll" 
+rem "$(TargetDir)CrystalDecisions.CrystalReports.Engine.dll" "$(TargetDir)CrystalDecisions.Enterprise.Framework.dll" "$(TargetDir)CrystalDecisions.Enterprise.InfoStore.dll" "$(TargetDir)CrystalDecisions.ReportSource.dll" "$(TargetDir)CrystalDecisions.Windows.Forms.dll" 
+del GTID.$(AssemblyName).dll DocSo.dll BarcodeLib.dll GvS.Controls.HtmlTextbox.dll Microsoft.Practices.EnterpriseLibrary.Caching.dll Microsoft.Practices.EnterpriseLibrary.Common.dll Microsoft.Practices.ObjectBuilder.dll Microsoft.Office.Interop.Excel.dll MaHoa.dll 
+rem CrystalDecisions.CrystalReports.Engine.dll CrystalDecisions.Enterprise.Framework.dll CrystalDecisions.Enterprise.InfoStore.dll CrystalDecisions.ReportSource.dll CrystalDecisions.Windows.Forms.dll
+copy /Y "$(TargetDir)$(AssemblyName).dll" "$(ProjectDir)..\..\Common\QLBH.Documents\References\$(AssemblyName).dll"
+rem copy /Y "$(TargetDir)$(AssemblyName).pdb" "$(ProjectDir)..\..\Common\QLBH.Documents\References\$(AssemblyName).pdb"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\DanhMuc\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DanhMuc.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\DanhMuc\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DanhMuc.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\DanhMuc\QLBanHang.Modules.DanhMuc.dll"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\DongBoERP\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DongBoERP.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\DongBoERP\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.DongBoERP.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\DongBoERP\QLBanHang.Modules.DongBoERP.dll"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\HeThong\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.HeThong.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\HeThong\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.HeThong.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\HeThong\QLBanHang.Modules.HeThong.dll"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\KhoHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.KhoHang.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\KhoHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.KhoHang.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\KhoHang\QLBanHang.Modules.KhoHang.dll"
+if exist "$(ProjectDir)..\QLBH.Win\Modules\BaoHanh\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BaoHanh.dll" copy /Y "$(ProjectDir)..\QLBH.Win\Modules\BaoHanh\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BaoHanh.dll" "$(ProjectDir)..\QLBH.Documents\References\TranAnh\BaoHanh\QLBanHang.Modules.BaoHanh.dll"
+if exist "$(ProjectDir)..\..\BanHang\QLBH.Win\Modules\BanHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BanHang.dll" copy /Y "$(ProjectDir)..\..\BanHang\QLBH.Win\Modules\BanHang\bin\$(ConfigurationName)\TranAnh\QLBanHang.Modules.BanHang.dll" "$(ProjectDir)..\..\Common\QLBH.Documents\References\TranAnh\BanHang\QLBanHang.Modules.BanHang.dll"</PostBuildEvent>
     <PreBuildEvent>if exist $(TargetDir)deploy.bat $(TargetDir)deploy.bat</PreBuildEvent>
   </PropertyGroup>
 </Project>

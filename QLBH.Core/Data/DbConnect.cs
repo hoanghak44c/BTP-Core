@@ -27,6 +27,8 @@ using System.Threading;
 using System.Windows.Forms;
 //using Microsoft.ReportingServices.Diagnostics.Utilities;
 using Oracle.DataAccess.Client;
+using MySql.Data.MySqlClient;
+
 //using QLBH.Common;
 using QLBH.Core.Business.Calculations;
 using QLBH.Core.Exceptions;
@@ -1910,6 +1912,46 @@ namespace QLBH.Core.Data
         internal GtidOracleStByConnection(OracleConnection connection) : base(connection) { }
     }
 
+    internal class GtidMySqlConnection : GtidConnection 
+    {
+        internal GtidMySqlConnection(MySqlConnection connection) : base(connection) { }
+
+        protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
+        {
+            return new GtidMySqlConnection((MySqlConnection)InnerConnection.BeginTransaction(isolationLevel), this);
+        }
+
+        internal override void DeriveParametersInstance(GtidCommand command)
+        {
+            MySqlCommandBuilder.DeriveParameters((MySqlCommand)command.InnerCommand);
+        }
+
+        public override string DataSource
+        {
+            get
+            {
+                return ((MySqlConnection)InnerConnection).DataSource;
+            }
+        }
+
+        public override string ServerVersion
+        {
+            get
+            {
+                return ((MySqlConnection)InnerConnection).ServerVersion;
+            }
+        }
+
+        public override string HostName
+        {
+            get
+            {
+                return ((MySqlConnection)InnerConnection).HostName;
+            }
+        }
+
+    }
+
     public class GtidConnection : DbConnection
     {
         protected static Hashtable HostEntriesCache = Hashtable.Synchronized(new Hashtable());
@@ -3595,6 +3637,21 @@ namespace QLBH.Core.Data
         public override void Rollback(string savepointName)
         {
             ((OracleTransaction)InnerTransaction).Rollback(savepointName);
+        }
+    }
+
+    internal class GtidMySqlTransaction : GtidTransaction 
+    {
+        internal GtidMySqlTransaction(MySqlTransaction transaction, IDbConnection connection) : base(transaction, connection) { }
+
+        public override void Save(string savepointName)
+        {
+            base.Save(savepointName);
+        }
+
+        public override void Rollback(string savepointName)
+        {
+            base.Rollback(savepointName);
         }
     }
 

@@ -241,7 +241,8 @@ namespace QLBH.Core.Data
             string sConnectionStringWebServiceForDev =
                 //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8MaIl/N8enScTvKudkkiC5pwukAQD/nsK6eaq5eL20Ioz7uDs7D0MUR1JujD8AOMUHm2vjCEg16pzBhfPd0xKMNsbLTSMrMe3K7bUBNKiaHorkmEB4R5dF8tWXi+HEnSkAs132i0X7s3Oq2Ksn3UwLjXYJY8zjPFjPKOXvG/xUAaOeAd6kAqE7XwU3TGugq1UiI/DiAWJH2zqyzFphe+643wU3TGugq1UgybsscpsyE5GRfVPyHNF8KTVZeAtek4hxaKVZlrwVNR"; // may 16
                 //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8MaIl/N8enScJIZJr45bABA4lM18XoETpeE1gFKOkrNYCYFCS8CURK2sSjvKR6M9CaaRkYkejuEvaA3M1B/8IoPIWsQsKVFbFrjHT3zYPxV7xdK+vq3hQkXpNHsvFhoGOUBUzylOssN/r12XMNnSanYBN7HPLhp970zvA5IAnJTdU1ASNqXUmmCDYdvUbTeqAUV4CwaOp2CCU1ASNqXUmmDHvbu3M6tUQ1pi0nby8f7M5HFSSy1tZOB5y8v/6d5hW644mbnZjN6o"; //build rieng cho TrungNT
-                "o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8LE9VJ8XaLtfCRcHTCljNtgT6yt3bkAb/uEdM6XcQT6GmVmvSSG0GyC1EpLe7fjIRn91TuZZ6MbU2JDPRTq6W7mHCd+6dXnSeSwqPZvB/Rge+p/ijLs74nnnu7i61zTnJ1ty9jFU/B1qNiPDG2zQjKicv2N3YxcGGehE+1jVPT8hyLG59vEj1Oc5FctBtWNUXWnThYtv4bgMyLG59vEj1OfpTSRcXRBT6EYV4ks2JyNQ8o5e8b/FQBpa4gKQe3XIqw=="; //server test cua Tuan
+                //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8LE9VJ8XaLtfCRcHTCljNtgT6yt3bkAb/uEdM6XcQT6GmVmvSSG0GyC1EpLe7fjIRn91TuZZ6MbU2JDPRTq6W7mHCd+6dXnSeSwqPZvB/Rge+p/ijLs74nnnu7i61zTnJ1ty9jFU/B1qNiPDG2zQjKicv2N3YxcGGehE+1jVPT8hyLG59vEj1Oc5FctBtWNUXWnThYtv4bgMyLG59vEj1OfpTSRcXRBT6EYV4ks2JyNQ8o5e8b/FQBpa4gKQe3XIqw=="; //server test cua Tuan
+                "KDmzV8arCk7AhrSnCZe44ly9kvsi8w15eb9DEqHDe7h/d313KYQ5Vzqdfui9ReRsUMqeCpY4GyoLNd9otF+7N2R7ylss1NaqglBnD7XMjwHIx+K0K184SQjbNmjage2XUxkHfqhxVNs="; //mysql-net
 
                 //test 1 ip
                 //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8MaIl/N8enScJIZJr45bABB0SQoN891ZzeE1gFKOkrNYCYFCS8CURK2sSjvKR6M9CaaRkYkejuEvaA3M1B/8IoPIWsQsKVFbFrjHT3zYPxV7vzBXlGIDfM2ApcSMVbbX06OlRcW00umJSAYhFEpkaMicGEOnh7/h5/KOXvG/xUAaOeAd6kAqE7XwU3TGugq1UiI/DiAWJH2zqyzFphe+643wU3TGugq1UgybsscpsyE5GRfVPyHNF8KTVZeAtek4hxaKVZlrwVNR"; //build rieng cho TrungNT
@@ -251,12 +252,16 @@ namespace QLBH.Core.Data
 
             //test do serial
             string sConnectionStringWebServiceForDev1 =
+                "KDmzV8arCk7AhrSnCZe44ly9kvsi8w15eb9DEqHDe7h/d313KYQ5Vzqdfui9ReRsUMqeCpY4GyoLNd9otF+7N2R7ylss1NaqglBnD7XMjwHIx+K0K184SQjbNmjage2XUxkHfqhxVNs="; //mysql-net
                 //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8BXYmF5u8sONWJaXf8m2h6oxvjNWBgcDwOEdM6XcQT6GmVmvSSG0GyC1EpLe7fjIRn91TuZZ6MbU2JDPRTq6W7mHCd+6dXnSefu1FtESR6hEWMnE+w4CMW6lap/1SxvWzz9ZDAd21lh9DUHWXbe0GK4rHN+M9URURpy/Y3djFwYZ6ET7WNU9PyHIsbn28SPU5zkVy0G1Y1RdadOFi2/huAzIsbn28SPU5+lNJFxdEFPoRhXiSzYnI1Dyjl7xv8VAGlriApB7dcir";//subserver
                 //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8MaIl/N8enScTvKudkkiC5pwukAQD/nsK6eaq5eL20Ioz7uDs7D0MUR1JujD8AOMUHm2vjCEg16pzBhfPd0xKMNsbLTSMrMe3K7bUBNKiaHorkmEB4R5dF8tWXi+HEnSkAs132i0X7s3Oq2Ksn3UwLjXYJY8zjPFjPKOXvG/xUAaOeAd6kAqE7XwU3TGugq1UiI/DiAWJH2zqyzFphe+643wU3TGugq1UgybsscpsyE5GRfVPyHNF8KTVZeAtek4hxaKVZlrwVNR"; // may 16
-                "o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8LE9VJ8XaLtfCRcHTCljNtgT6yt3bkAb/uEdM6XcQT6GmVmvSSG0GyC1EpLe7fjIRn91TuZZ6MbU2JDPRTq6W7mHCd+6dXnSeSwqPZvB/Rge+p/ijLs74nnnu7i61zTnJ1ty9jFU/B1qNiPDG2zQjKicv2N3YxcGGehE+1jVPT8hyLG59vEj1Oc5FctBtWNUXWnThYtv4bgMyLG59vEj1OfpTSRcXRBT6EYV4ks2JyNQ8o5e8b/FQBpa4gKQe3XIqw=="; //server test cua Tuan
-            
+                //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8LE9VJ8XaLtfCRcHTCljNtgT6yt3bkAb/uEdM6XcQT6GmVmvSSG0GyC1EpLe7fjIRn91TuZZ6MbU2JDPRTq6W7mHCd+6dXnSeSwqPZvB/Rge+p/ijLs74nnnu7i61zTnJ1ty9jFU/B1qNiPDG2zQjKicv2N3YxcGGehE+1jVPT8hyLG59vEj1Oc5FctBtWNUXWnThYtv4bgMyLG59vEj1OfpTSRcXRBT6EYV4ks2JyNQ8o5e8b/FQBpa4gKQe3XIqw=="; //server test cua Tuan
+                //"5JucunL2BTiVdvgJW+bKTYi6QEWpbiY7b7NLTcQUMkqoGH3McjG+cCi0WZMpu5NSA44Kt+XhFYpCuDuzZ+z3B7ON58Yvab9cmJ5U8fIBI24="; // mysql
+
             string sConnectionStringWebServiceForUAT =
-                "o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8LE9VJ8XaLtfCRcHTCljNtgT6yt3bkAb/uEdM6XcQT6GmVmvSSG0GyC1EpLe7fjIRn91TuZZ6MbU2JDPRTq6W7mHCd+6dXnSeSwqPZvB/Rge+p/ijLs74nnnu7i61zTnJ1ty9jFU/B1qNiPDG2zQjKicv2N3YxcGGehE+1jVPT8hyLG59vEj1Oc5FctBtWNUXWnThYtv4bgMyLG59vEj1OfpTSRcXRBT6EYV4ks2JyNQ8o5e8b/FQBpa4gKQe3XIqw=="; //server test cua Tuan
+                "KDmzV8arCk7AhrSnCZe44ly9kvsi8w15eb9DEqHDe7h/d313KYQ5Vzqdfui9ReRsUMqeCpY4GyoLNd9otF+7N2R7ylss1NaqglBnD7XMjwHIx+K0K184SQjbNmjage2XUxkHfqhxVNs="; //mysql-net
+                //"5JucunL2BTiVdvgJW+bKTYi6QEWpbiY7b7NLTcQUMkqoGH3McjG+cCi0WZMpu5NSA44Kt+XhFYpCuDuzZ+z3B7ON58Yvab9cmJ5U8fIBI24="; // mysql
+                //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8LE9VJ8XaLtfCRcHTCljNtgT6yt3bkAb/uEdM6XcQT6GmVmvSSG0GyC1EpLe7fjIRn91TuZZ6MbU2JDPRTq6W7mHCd+6dXnSeSwqPZvB/Rge+p/ijLs74nnnu7i61zTnJ1ty9jFU/B1qNiPDG2zQjKicv2N3YxcGGehE+1jVPT8hyLG59vEj1Oc5FctBtWNUXWnThYtv4bgMyLG59vEj1OfpTSRcXRBT6EYV4ks2JyNQ8o5e8b/FQBpa4gKQe3XIqw=="; //server test cua Tuan
                 //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8MaIl/N8enScO+wmGH04brlwukAQD/nsK6eaq5eL20Ioz7uDs7D0MUR1JujD8AOMUHm2vjCEg16pzBhfPd0xKMNsbLTSMrMe3K7bUBNKiaHorkmEB4R5dF8tWXi+HEnSkAs132i0X7s3Oq2Ksn3UwLjXYJY8zjPFjPKOXvG/xUAaOeAd6kAqE7XwU3TGugq1UiI/DiAWJH2zqyzFphe+643wU3TGugq1UgybsscpsyE5GRfVPyHNF8KTVZeAtek4hxaKVZlrwVNR"; //addr
                 //test 1 ip
                 //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8MaIl/N8enScJIZJr45bABA4lM18XoETpeE1gFKOkrNYCYFCS8CURK2sSjvKR6M9CaaRkYkejuEvaA3M1B/8IoPIWsQsKVFbFrjHT3zYPxV7xdK+vq3hQkXpNHsvFhoGOUBUzylOssN/r12XMNnSanYBN7HPLhp970zvA5IAnJTdU1ASNqXUmmCDYdvUbTeqAUV4CwaOp2CCU1ASNqXUmmDHvbu3M6tUQ1pi0nby8f7M5HFSSy1tZOB5y8v/6d5hW644mbnZjN6o"; //build rieng cho TrungNT
@@ -265,7 +270,8 @@ namespace QLBH.Core.Data
                 //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8MaIl/N8enScJIZJr45bABB0SQoN891ZzeE1gFKOkrNYJL9j7XcixftQOGzPLGwUJKboVsyxQXFNfAqBd7wbNkRwQNuVHYJ7aiSWWyBitIVh5FOBviiRaWoPOR91VzPGliUVOAtLuqIM31qG8NIGz6p/QGONnsa6UfUXS+Sttf1WbiwmnGMI6PveukqYH6SrYCtBxRneMstVJCoHEsi7cS2cv2N3YxcGGehE+1jVPT8hyLG59vEj1Oc5FctBtWNUXWnThYtv4bgMyLG59vEj1OfpTSRcXRBT6EYV4ks2JyNQ8o5e8b/FQBpa4gKQe3XIqw==";
 
             string sConnectionStringWebServiceTuan =
-                "o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8MaIl/N8enScO+wmGH04brlwukAQD/nsK6eaq5eL20Ioz7uDs7D0MUR1JujD8AOMUHm2vjCEg16pzBhfPd0xKMNsbLTSMrMe3FRhCk51E7NTeNYBiK4KoedPx6QXYHfaQ8lbpbMLHhfH41CnszeZBRpjYuOC8beqQA==";
+                //"o8zZJDL2nJcry4Yog5GHEXMI+OA3VY74fzX7pyJ12ymxsfRh/JKbebapyl+1zS9VHeH5FLnscMCgV4ySxE8t8MaIl/N8enScO+wmGH04brlwukAQD/nsK6eaq5eL20Ioz7uDs7D0MUR1JujD8AOMUHm2vjCEg16pzBhfPd0xKMNsbLTSMrMe3FRhCk51E7NTeNYBiK4KoedPx6QXYHfaQ8lbpbMLHhfH41CnszeZBRpjYuOC8beqQA==";
+                "KDmzV8arCk7AhrSnCZe44ly9kvsi8w15eb9DEqHDe7h/d313KYQ5Vzqdfui9ReRsUMqeCpY4GyoLNd9otF+7N2R7ylss1NaqglBnD7XMjwHIx+K0K184SQjbNmjage2XUxkHfqhxVNs="; //mysql-net
 
             string sConnectionString = sConnectionStringWebServiceForDev;  
 
@@ -722,9 +728,9 @@ namespace QLBH.Core.Data
         {
             try
             {
-                if (CurrentConnection == null || CurrentConnection.IsDisposed || !(CurrentConnection is GtidOracleProdConnection))
+                if (CurrentConnection == null || CurrentConnection.IsDisposed || !(CurrentConnection is GtidMySqlConnection))
                 {
-                    CurrentConnection = new GtidOracleProdConnection(new OracleConnection(GetConnectionString()));
+                    CurrentConnection = new GtidMySqlConnection(new MySqlConnection(GetConnectionString()));
                 }
                 
                 CurrentConnection.OpenIfClosed();
@@ -1131,7 +1137,7 @@ namespace QLBH.Core.Data
         {
             get
             {
-                object param = parameterCollection[parameterName];
+                object param = parameterCollection.Contains(parameterName) ? parameterCollection[parameterName] : parameterCollection["@"+parameterName];
                 if (param is GtidParameter)
                     return (GtidParameter)param;
                 return new GtidParameter((IDbDataParameter)param);
@@ -1914,7 +1920,29 @@ namespace QLBH.Core.Data
 
     internal class GtidMySqlConnection : GtidConnection 
     {
-        internal GtidMySqlConnection(MySqlConnection connection) : base(connection) { }
+        private static Dictionary<string, string> commandTextDic;
+
+        internal GtidMySqlConnection(MySqlConnection connection) : base(connection)
+        {
+            if (commandTextDic == null) {
+                commandTextDic = new Dictionary<string, string>();
+                
+                string path = String.Format("{0}\\{1}",
+                    AppDomain.CurrentDomain.BaseDirectory.Contains("\\bin\\") ?
+                    AppDomain.CurrentDomain.BaseDirectory + "..\\..\\.." :
+                    AppDomain.CurrentDomain.BaseDirectory, "mysqlcommandtext.cmt");
+
+                if (File.Exists(path))
+                {
+                    string[] lines = File.ReadAllLines(path);
+                    foreach (string line in lines) {
+                        var key = line.Split("$$$".ToCharArray())[0];
+                        var value = line.Split("$$$".ToCharArray())[3];
+                        commandTextDic.Add(key, value);
+                    }
+                }
+            }
+        }
 
         protected override DbTransaction BeginDbTransaction(IsolationLevel isolationLevel)
         {
@@ -1924,6 +1952,58 @@ namespace QLBH.Core.Data
         internal override void DeriveParametersInstance(GtidCommand command)
         {
             MySqlCommandBuilder.DeriveParameters((MySqlCommand)command.InnerCommand);
+        }
+
+        internal override void CompileCommandText(GtidCommand command)
+        {
+            if (command.CommandType == CommandType.StoredProcedure) return;
+
+            var key = command.CommandText.GetHashCode().ToString();
+            
+            var value = command.CommandText
+                .Replace('\n', ' ')
+                .Replace('\r', ' ')
+                .Replace('\t', ' ')
+                .Replace("  ", " ");
+
+            if (!commandTextDic.ContainsKey(key))
+            {
+                var tmp = value;
+                do
+                {
+                    tmp = value;
+                    value = tmp.Replace("  ", " ");
+                } while (tmp != value);
+
+                commandTextDic.Add(key, value);
+
+                string path = String.Format("{0}\\{1}", 
+                    AppDomain.CurrentDomain.BaseDirectory.Contains("\\bin\\") ? 
+                    AppDomain.CurrentDomain.BaseDirectory + "..\\..\\.." : 
+                    AppDomain.CurrentDomain.BaseDirectory, "mysqlcommandtext.cmt");
+
+                File.AppendAllText(path, String.Format("{0}$$${1}\r\n", key, value));
+            }
+            else 
+            {
+                command.CommandText = commandTextDic[key];                
+            }
+        }
+
+        internal override string SymbolParam
+        {
+            get
+            {
+                return "@";
+            }
+        }
+
+        internal override string RegExPreProcess
+        {
+            get
+            {
+                return "`(.*?)`";
+            }
         }
 
         public override string DataSource
@@ -1939,6 +2019,14 @@ namespace QLBH.Core.Data
             get
             {
                 return ((MySqlConnection)InnerConnection).ServerVersion;
+            }
+        }
+
+        public override List<string> HostEntries
+        {
+            get
+            {
+                return new List<string>() { "127.0.0.1" };
             }
         }
     }
@@ -1978,6 +2066,15 @@ namespace QLBH.Core.Data
         internal virtual void DeriveParametersInstance(GtidCommand command){}
 
         [MethodImpl(MethodImplOptions.Synchronized)]
+        internal virtual void CompileCommandText(GtidCommand command) { }
+
+        internal virtual string SymbolParam {
+            get {
+                return ":";
+            }
+        }
+
+        [MethodImpl(MethodImplOptions.Synchronized)]
         internal void DeriveParameters(GtidCommand command, params object[] paramValues)
         {
             OpenIfClosed();
@@ -1998,6 +2095,8 @@ namespace QLBH.Core.Data
             }
             else
             {
+                CompileCommandText(command);
+                
                 if (paramValues != null && paramValues.Length > 0)
                 {
                     string cmdText = PreProcess(command.CommandText);
@@ -2006,7 +2105,7 @@ namespace QLBH.Core.Data
 
                     var splitCharArr = new[] { ' ', ',', '\n', '\r', '\t', '>', '<', '=', '+', '|', '-', '*', '/', ')' };
 
-                    int index = cmdText.IndexOf(":");
+                    int index = cmdText.IndexOf(SymbolParam);
 
                     int indexCompiled = 0;
 
@@ -2042,7 +2141,7 @@ namespace QLBH.Core.Data
                                 indexCompiled = index;
                             }
 
-                            index = cmdText.IndexOf(":", index + 1);
+                            index = cmdText.IndexOf(SymbolParam, index + 1);
 
                         } while (!isCompiled);
 
@@ -2063,7 +2162,8 @@ namespace QLBH.Core.Data
 
                         if (command.Parameters.Contains(paramName))
                         {
-                            command.Parameters.Add(command.Parameters[paramName].Clone());
+                            //mysql can not add same param
+                            //command.Parameters.Add(command.Parameters[paramName].Clone());
 
                             indexCompiled = index;
                         } 
@@ -2072,7 +2172,7 @@ namespace QLBH.Core.Data
                             throw new ManagedException("Can not bind values to parameters.", false);
                         }
 
-                        index = cmdText.IndexOf(":", index + 1);
+                        index = cmdText.IndexOf(SymbolParam, index + 1);
                     }
 
                     command.Prepare();
@@ -2080,6 +2180,14 @@ namespace QLBH.Core.Data
             }
 
             if (!ConnectionUtil.Instance.IsInTransaction) Close();
+        }
+
+        internal virtual string RegExPreProcess
+        {
+            get
+            {
+                return "'(.*?)'";
+            }
         }
 
         private static string PreProcess(string commandText)

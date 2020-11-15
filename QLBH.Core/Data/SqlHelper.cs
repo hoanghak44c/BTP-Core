@@ -138,6 +138,8 @@ namespace QLBH.Core.Data
             //set the command type
             command.CommandType = commandType;
 
+            command.Connection.CompileCommandText(command);
+
             //attach the command parameters if they are provided
             if (commandParameters != null)
             {
@@ -344,6 +346,32 @@ namespace QLBH.Core.Data
             bool mustCloseConnection= false;
             
             PrepareCommand(cmd, connection, (GtidTransaction)null, commandType, commandText, commandParameters, out mustCloseConnection);
+
+            //finally, execute the command.
+            int retval = cmd.ExecuteNonQuery();
+
+            // detach the SqlParameters from the command object, so they can be used again.
+            cmd.Parameters.Clear();
+            if (mustCloseConnection)
+                connection.Close();
+            return retval;
+        }
+
+        public static int ExecuteNonQuery(GtidConnection connection, CommandType commandType, string commandText, params object[] commandParameters)
+        {
+            //create a command and prepare it for execution
+            //GtidCommand cmd = new GtidCommand();
+            GtidCommand cmd = connection.CreateCommand();
+
+            bool mustCloseConnection = false;
+
+            //PrepareCommand(cmd, connection, (GtidTransaction)null, commandType, commandText, commandParameters, out mustCloseConnection);
+
+            cmd.CommandText = commandText;
+
+            cmd.CommandType = commandType;
+
+            GtidCommandBuilder.Instance.DeriveParameters(cmd, commandParameters);
 
             //finally, execute the command.
             int retval = cmd.ExecuteNonQuery();
@@ -615,6 +643,34 @@ namespace QLBH.Core.Data
             return ds;
         }
 
+        public static DataSet ExecuteDataset(GtidConnection connection, CommandType commandType, string commandText, params object[] commandParameters)
+        {
+            //create a command and prepare it for execution
+            GtidCommand cmd = connection.CreateCommand();
+            
+            bool mustCloseConnection = false;
+            //PrepareCommand(cmd, connection, (GtidTransaction)null, commandType, commandText, commandParameters, out mustCloseConnection);
+            
+            cmd.CommandText = commandText;
+            
+            cmd.CommandType = commandType;
+
+            GtidCommandBuilder.Instance.DeriveParameters(cmd, commandParameters);
+
+            //create the DataAdapter & DataSet
+            GtidDataAdapter da = new GtidDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            cmd.CommandTimeout = 400;
+            //fill the DataSet using default values for DataTable names, etc.
+            da.Fill(ds);
+
+            // detach the SqlParameters from the command object, so they can be used again.            
+            cmd.Parameters.Clear();
+            if (mustCloseConnection)
+                connection.Close();
+            //return the dataset
+            return ds;
+        }
         /// <summary>
         /// Execute a stored procedure via a GtidCommand (that returns a resultset) against the specified GtidConnection 
         /// using the provided parameter values.  This method will query the database to discover the parameters for the 
@@ -1152,6 +1208,31 @@ namespace QLBH.Core.Data
             GtidCommand cmd = connection.CreateCommand();
             bool mustCloseConnection = false;
             PrepareCommand(cmd, connection, (GtidTransaction)null, commandType, commandText, commandParameters, out mustCloseConnection);
+
+            //execute the command & return the results
+            object retval = cmd.ExecuteScalar();
+
+            // detach the SqlParameters from the command object, so they can be used again.
+            cmd.Parameters.Clear();
+            if (mustCloseConnection)
+                connection.Close();
+            return retval;
+
+        }
+
+        public static object ExecuteScalar(GtidConnection connection, CommandType commandType, string commandText, params object[] commandParameters)
+        {
+            //create a command and prepare it for execution
+            //GtidCommand cmd = new GtidCommand();
+            GtidCommand cmd = connection.CreateCommand();
+            bool mustCloseConnection = false;
+            //PrepareCommand(cmd, connection, (GtidTransaction)null, commandType, commandText, commandParameters, out mustCloseConnection);
+
+            cmd.CommandText = commandText;
+
+            cmd.CommandType = commandType;
+
+            GtidCommandBuilder.Instance.DeriveParameters(cmd, commandParameters);
 
             //execute the command & return the results
             object retval = cmd.ExecuteScalar();

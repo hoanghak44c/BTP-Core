@@ -605,16 +605,14 @@ namespace QLBH.Core.Data
             
             commandText = String.Format(commandText, dep.ToLower());
 
-            SqlHelper.ExecuteNonQuery(ConnectionUtil.Instance.GetConnection(), CommandType.Text, commandText);
+            SqlHelper.ExecuteNonQuery(ConnectionUtil.Instance.GetConnection(), CommandType.Text,
+                "UPDATE tbl_cg SET cref=0 WHERE cdep LIKE '%'|:dep|'%'", dep.ToLower());
         }
 
         private static bool? IsRefreshed(string key, string mac)
         {
-            string commandText = "SELECT cref FROM tbl_cg WHERE cname='{0}' AND identifier='{1}'";
-            commandText = String.Format(commandText, key, mac);
-
             object result = SqlHelper.ExecuteScalar(ConnectionUtil.Instance.GetConnection(), CommandType.Text,
-                                                    commandText);
+                "SELECT cref FROM tbl_cg WHERE cname=:cname AND identifier=:identifier", key, mac);
             
             if (result != null) return Convert.ToBoolean(result);
             return null;

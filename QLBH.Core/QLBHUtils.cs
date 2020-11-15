@@ -710,18 +710,20 @@ namespace QLBH.Core
 
         public DateTime GetSysDate()
         {
-            ExecuteCommand("sp_GetSysDate");
+            return GetObjectCommand<DateTime>("sp_GetSysDate");
 
-            if (Parameters["p_SysDate"].Value is DateTime)
-            {
-                return Convert.ToDateTime(Parameters["p_SysDate"].Value);
-            }
-            if (Parameters["p_SysDate"].Value is Oracle.DataAccess.Types.OracleDate)
-            {
-                return ((Oracle.DataAccess.Types.OracleDate)Parameters["p_SysDate"].Value).Value;
-            }
+            //ExecuteCommand("sp_GetSysDate");
 
-            return DateTime.MinValue;
+            //if (Parameters["p_SysDate"].Value is DateTime)
+            //{
+            //    return Convert.ToDateTime(Parameters["p_SysDate"].Value);
+            //}
+            //if (Parameters["p_SysDate"].Value is Oracle.DataAccess.Types.OracleDate)
+            //{
+            //    return ((Oracle.DataAccess.Types.OracleDate)Parameters["p_SysDate"].Value).Value;
+            //}
+
+            //return DateTime.MinValue;
 
         }
     }

@@ -11,6 +11,7 @@ namespace QLBH.Core.DAO
     {
 
         private static EventLogDAO instance;
+        private static object lockObj;
 
         private EventLogDAO()
         {
@@ -20,7 +21,11 @@ namespace QLBH.Core.DAO
         {
             get
             {
-                if (instance == null) instance = new EventLogDAO();
+                if (instance == null)
+                {
+                    instance = new EventLogDAO();
+                    lockObj = new object();
+                }
                 return instance;
             }
         }
@@ -44,11 +49,12 @@ namespace QLBH.Core.DAO
         {
             try
             {
-                string fileName = AppDomain.CurrentDomain.BaseDirectory +
-                                  String.Format("\\QLBH_Log_{0}_{1}.txt", Process.GetCurrentProcess().Id,
-                                                Thread.CurrentThread.ManagedThreadId);
+                string fileName = String.Format("{0}\\{1}", AppDomain.CurrentDomain.BaseDirectory, "QLBH_Log.txt");
 
-                File.AppendAllText(fileName, DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss tt") + ": Description: " + description + "\nType: " + type + "\n");
+                lock (lockObj)
+                {
+                    File.AppendAllText(fileName, DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss tt") + ": Description: " + description + "\nType: " + type + "\n");
+                }
             }
             catch(System.UnauthorizedAccessException)
             {

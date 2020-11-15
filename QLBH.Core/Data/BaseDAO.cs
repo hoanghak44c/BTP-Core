@@ -76,7 +76,7 @@ namespace QLBH.Core.Data
         internal protected const string spServiceInsert = "sp_Services_Insert";
         internal protected const string spServiceUpdateStatus = "sp_Services_Status_Update";
         #endregion
-
+        
 
         protected string CRUDTableName;
         protected bool UseCaching;
@@ -244,6 +244,8 @@ namespace QLBH.Core.Data
                     ConnectionUtil.CurrentManagedObject.Connection == null ||
                     !(ConnectionUtil.CurrentManagedObject.Connection is GtidOracleProdConnection)
 
+                    //in case we have two total recall servers and one of them, stand by server, using for report only.
+
                                      ? ConnectionUtil.Instance.GetConnection().CreateCommand()
                                      : ConnectionUtil.CurrentManagedObject.Connection.CreateCommand();
 
@@ -373,7 +375,6 @@ namespace QLBH.Core.Data
                 throw new ManagedException(ex.Message, false, commandText, paramValues);
             }
         }
-
 
         protected DataSet GetDataSetCommand(string srcTable, string commandText, params object[] paramValues)
         {
@@ -971,23 +972,23 @@ namespace QLBH.Core.Data
 
         private void SaveCg(string key, string mac, string dep, bool existed)
         {
-            SqlHelper.ExecuteNonQuery(ConnectionUtil.Instance.GetConnection(), CommandType.Text, String.Format(!existed
-                    ? "INSERT INTO tbl_cg(cdep,cname,identifier,cref,ccre) VALUES('{0}','{1}','{2}',1,SYSDATE)"
-                    : "UPDATE tbl_cg SET cdep='{0}',cref=1,ccre=SYSDATE WHERE cname='{1}' AND identifier='{2}'", dep, key, mac));
+            SqlHelper.ExecuteNonQuery(ConnectionUtil.Instance.GetConnection(), CommandType.Text, !existed
+                    ? "INSERT INTO tbl_cg(cdep,cname,identifier,cref,ccre) VALUES(:cdep,:cname,:identifier,1,SYSDATE)"
+                    : "UPDATE tbl_cg SET cdep=:cdep,cref=1,ccre=SYSDATE WHERE cname=:cname AND identifier=:identifier", dep, key, mac);
         }
 
         private void ClearCg(string dep)
         {
             SqlHelper.ExecuteNonQuery(ConnectionUtil.Instance.GetConnection(),CommandType.Text, 
                 
-                String.Format("UPDATE tbl_cg SET cref=0 WHERE cdep LIKE '{0}'", String.Format("%,{0},%", dep)));
+                "UPDATE tbl_cg SET cref=0 WHERE cdep LIKE '%'|:cdep|'%'", dep);
         }
 
         private bool? IsRefreshed(string key, string mac)
         {
             var result = SqlHelper.ExecuteScalar(ConnectionUtil.Instance.GetConnection(), CommandType.Text,
-                
-                String.Format("SELECT cref FROM tbl_cg WHERE cname='{0}' AND identifier='{1}'", key, mac));
+
+                "SELECT cref FROM tbl_cg WHERE cname=:cname AND identifier=:identifier", key, mac);
 
             if (result != null) return Convert.ToBoolean(result);
 
@@ -998,7 +999,7 @@ namespace QLBH.Core.Data
         {
             var result = SqlHelper.ExecuteScalar(ConnectionUtil.Instance.GetConnection(), CommandType.Text,
                 
-                String.Format("SELECT ccre FROM tbl_cg WHERE cname='{0}' AND identifier='{1}'", key, mac));
+                "SELECT ccre FROM tbl_cg WHERE cname=:cname AND identifier=:identifier", key, mac);
 
             if (result != null) return (DateTime) result;
 
